@@ -1,3 +1,14 @@
-name        'dotdeb'
-description 'In order to add the Dotdeb repository for Debian-based LAMP servers to the source.list.' 
-version     '0.0.2'
+name             'dotdeb'
+description      'A cookbook to add the Dotdeb repository for Debian-based LAMP servers to the sources.list.d.'
+version          '0.0.2'
+maintainer       'Bernd Hoffmann'
+maintainer_email 'info@gebeat.com'
+license          'MIT'
+long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
+
+supports 'debian', '>= 6.0'
+depends  'apt'
+
+recipe   'dotdeb::default',    'Adds the main repository to the sources.list.d and installs the GnuPG key.'
+recipe   'dotdeb::php_newest', 'Adds additional repository to the sources.list.d to install PHP 5.4 on Debian 6.0 "Squeeze" or PHP 5.5 on Debian 7.0 "Wheezy".'
+

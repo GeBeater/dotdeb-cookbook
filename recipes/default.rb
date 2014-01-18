@@ -1,10 +1,18 @@
+if node['lsb']['codename'].to_s.empty?
+    Chef::Application.fatal!('The lsb-release package is required.')
+end
 
-apt_repository "dotdeb-wheezy" do
-  uri "http://packages.dotdeb.org"
+unless ['squeeze', 'wheezy'].include?(node['lsb']['codename'])
+    Chef::Application.fatal!('A stable Debian system in version >= 6.0 is required.')
+end
+
+apt_repository 'dotdeb' do
+  uri 'http://packages.dotdeb.org'
   deb_src true
-  distribution "wheezy"
-  components ["all"]
-  key "http://www.dotdeb.org/dotdeb.gpg"
+  distribution node['lsb']['codename']
+  components ['all']
+  arch 'amd64,i386'
+  key 'http://www.dotdeb.org/dotdeb.gpg'
   action :add
 end
 
