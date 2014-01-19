@@ -9,3 +9,6 @@ Berksfile.lock
 
 # Bundler
 Gemfile.lock
+
+# Simplecov Coverage
+coverage/
