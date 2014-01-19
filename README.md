@@ -2,6 +2,8 @@ dotdeb Cookbook
 ===============
 
 [![Build Status](https://secure.travis-ci.org/GeBeater/dotdeb-cookbook.png)](http://travis-ci.org/GeBeater/dotdeb-cookbook)
+[![Coverage Status](https://coveralls.io/repos/GeBeater/dotdeb-cookbook/badge.png)](https://coveralls.io/r/GeBeater/dotdeb-cookbook)
+[![Dependency Status](https://www.versioneye.com/user/projects/52dbd4d2ec13750ec70005e9/badge.png)](https://www.versioneye.com/user/projects/52dbd4d2ec13750ec70005e9)
 
 This cookbook includes recipes to add the Dotdeb repository to your Debian "Squeeze" or
 "Wheezy" systems to turn the boxes into powerful, stable and up-to-date LAMP servers.
