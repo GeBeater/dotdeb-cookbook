@@ -2,7 +2,6 @@ dotdeb Cookbook
 ===============
 
 [![Build Status](https://secure.travis-ci.org/GeBeater/dotdeb-cookbook.png)](http://travis-ci.org/GeBeater/dotdeb-cookbook)
-[![Coverage Status](https://coveralls.io/repos/GeBeater/dotdeb-cookbook/badge.png)](https://coveralls.io/r/GeBeater/dotdeb-cookbook)
 [![Dependency Status](https://www.versioneye.com/user/projects/52dbd4d2ec13750ec70005e9/badge.png)](https://www.versioneye.com/user/projects/52dbd4d2ec13750ec70005e9)
 
 This cookbook includes recipes to add the Dotdeb repository to your Debian "Squeeze" or
@@ -10,7 +9,19 @@ This cookbook includes recipes to add the Dotdeb repository to your Debian "Sque
 
 Further information regarding the Dotdeb repository is available via http://www.dotdeb.org/ .
 
-## Contribution
+Recipes
+-------
+
+### dotdeb::default
+
+Adds the main repository to the sources.list.d and installs the GnuPG key.
+
+### dotdeb::php_newest
+
+Adds additional repository to the sources.list.d to install PHP 5.4 on Debian 6.0 "Squeeze" or PHP 5.5 on Debian 7.0 "Wheezy".
+
+Contribution
+------------
 
 ### Virtual Development Environment
 
@@ -33,12 +44,12 @@ cd dotdeb-cookbook
 vagrant up
 ```
 
-## Tests
+### Tests
 
 In order to validate changes at the recipes and these effects you can provision the
 virtual environment via the `vagrant provision` command from the host system.
 
-The spec can be run from the guest system in the folder `/vagrant` via `bundle exec rspec`.
+The lint tool and spec can be run from the guest system in the folder `/vagrant` via `bundle exec rake`.
 
 ## License
 

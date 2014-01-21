@@ -10,5 +10,5 @@ Berksfile.lock
 # Bundler
 Gemfile.lock
 
-# Simplecov Coverage
+# ChefSpec Coverage Reporter
 coverage/

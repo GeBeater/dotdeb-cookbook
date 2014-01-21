@@ -8,7 +8,7 @@ describe 'dotdeb::default' do
         end.converge(described_recipe)
     end
 
-    it 'add the dotdeb repository to sources.list.de' do
+    it 'add the dotdeb repository to sources.list.d' do
         expect(chef_run).to add_apt_repository 'dotdeb'
     end
 
