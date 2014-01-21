@@ -38,8 +38,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   # Enable provisioning with chef solo and adding some recipes.
   config.vm.provision :chef_solo do |chef|
-    chef.add_recipe "dotdeb::default"
-    chef.add_recipe "dotdeb::php_newest"
+    chef.add_recipe "dotdeb_repo::default"
+    chef.add_recipe "dotdeb_repo::php_newest"
 
     # You may also specify custom JSON attributes:
     chef.json = {  }

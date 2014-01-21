@@ -1,5 +1,5 @@
-dotdeb Cookbook
-===============
+dotdeb_repo Cookbook
+====================
 
 [![Build Status](https://secure.travis-ci.org/GeBeater/dotdeb-cookbook.png)](http://travis-ci.org/GeBeater/dotdeb-cookbook)
 [![Dependency Status](https://www.versioneye.com/user/projects/52dbd4d2ec13750ec70005e9/badge.png)](https://www.versioneye.com/user/projects/52dbd4d2ec13750ec70005e9)
@@ -12,11 +12,11 @@ Further information regarding the Dotdeb repository is available via http://www.
 Recipes
 -------
 
-### dotdeb::default
+### dotdeb_repo::default
 
 Adds the main repository to the sources.list.d and installs the GnuPG key.
 
-### dotdeb::php_newest
+### dotdeb_repo::php_newest
 
 Adds additional repository to the sources.list.d to install PHP 5.4 on Debian 6.0 "Squeeze" or PHP 5.5 on Debian 7.0 "Wheezy".
 

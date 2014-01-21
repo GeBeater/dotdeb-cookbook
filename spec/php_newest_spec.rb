@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe 'dotdeb::php_newest' do
+describe 'dotdeb_repo::php_newest' do
 
     context 'squeeze' do
         let(:chef_run) do

@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe 'dotdeb::default' do
+describe 'dotdeb_repo::default' do
 
     context 'squeeze' do
         let(:chef_run) do
