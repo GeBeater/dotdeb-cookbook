@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe 'dotdeb::default' do
+describe 'dotdeb::php_newest' do
 
     context 'squeeze' do
         let(:chef_run) do
@@ -13,8 +13,7 @@ describe 'dotdeb::default' do
         end
 
         it 'add the dotdeb repository to sources.list.d' do
-            expect(chef_run).to add_apt_repository 'dotdeb'
-            expect(chef_run).to add_apt_preference 'dotdeb'
+            expect(chef_run).to add_apt_repository 'dotdeb-php54'
         end
     end
 
@@ -29,8 +28,7 @@ describe 'dotdeb::default' do
         end
 
         it 'add the dotdeb repository to sources.list.d' do
-            expect(chef_run).to add_apt_repository 'dotdeb'
-            expect(chef_run).to add_apt_preference 'dotdeb'
+            expect(chef_run).to add_apt_repository 'dotdeb-php55'
         end
     end
 
