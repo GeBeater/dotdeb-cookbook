@@ -3,4 +3,6 @@
 # that you are currently working on.
 metadata
 
+source 'https://api.berkshelf.com/'
+
 cookbook 'apt', :git => 'https://github.com/opscode-cookbooks/apt.git', :branch => 'v2.3.4'
