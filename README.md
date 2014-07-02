@@ -38,7 +38,7 @@ Using Vagrant to create a virtual development environment is quite simple by fol
 #### Version Requirements
 
 The present (vagrant) configuration uses Berkshelf >= 3.0, which required Vagrant >= 1.5.2 as well as
-vagrant-berkshelf plugin >= 2.0.0. The instructions below have been successfully applied on Debian 7.0.X.
+vagrant-berkshelf plugin >= 2.0.0. The instructions below have been successfully applied on Debian 7.5.
 
 ```
 cd /tmp
