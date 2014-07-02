@@ -2,7 +2,7 @@ dotdeb_repo Cookbook
 ====================
 
 [![Build Status](https://secure.travis-ci.org/GeBeater/dotdeb-cookbook.png)](http://travis-ci.org/GeBeater/dotdeb-cookbook)
-[![Dependency Status](https://www.versioneye.com/user/projects/52dbd4d2ec13750ec70005e9/badge.png)](https://www.versioneye.com/user/projects/52dbd4d2ec13750ec70005e9)
+[![Dependency Status](https://www.versioneye.com/user/projects/53b44b900d5bb8b32d00001c/badge.png)](https://www.versioneye.com/user/projects/53b44b900d5bb8b32d00001c)
 
 This cookbook includes recipes to add the Dotdeb repository to your Debian "Squeeze" or
 "Wheezy" systems to turn the boxes into powerful, stable and up-to-date LAMP servers.
@@ -34,6 +34,18 @@ Using Vagrant to create a virtual development environment is quite simple by fol
 2. Install [Vagrant](http://downloads.vagrantup.com/)
 3. Install [Vagrant-Berkshelf Plugin](https://github.com/riotgames/vagrant-berkshelf)
 4. Install [Chef](http://www.opscode.com/chef/install/)
+
+#### Version Requirements
+
+The present (vagrant) configuration uses Berkshelf >= 3.0, which required Vagrant >= 1.5.2 as well as
+vagrant-berkshelf plugin >= 2.0.0. The instructions below have been successfully applied on Debian 7.0.X.
+
+```
+cd /tmp
+wget https://dl.bintray.com/mitchellh/vagrant/vagrant_1.6.3_x86_64.deb
+dpkg -i vagrant_1.6.3_x86_64.deb
+vagrant plugin install vagrant-berkshelf --plugin-version 2.0.1
+```
 
 #### Preparation of the Virtual Environment
 
