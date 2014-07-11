@@ -1,6 +1,6 @@
 name             'dotdeb_repo'
 description      'A cookbook to add the Dotdeb repository for Debian-based LAMP servers to the sources.list.d.'
-version          '1.0.3'
+version          '1.1.0'
 maintainer       'Bernd Hoffmann'
 maintainer_email 'info@gebeat.com'
 license          'MIT'
