@@ -19,13 +19,5 @@ end
 apt_preference 'dotdeb' do
   glob         '*'
   pin          'origin packages.dotdeb.org'
-  pin_priority node['dotdeb_repo']['apt_preference']['default']
-end
-
-node['dotdeb_repo']['apt_preference']['customs'].each do |apt_preference|
-  apt_preference "dotdeb-#{apt_preference["glob"]}" do
-    glob         apt_preference['glob']
-    pin          'origin packages.dotdeb.org'
-    pin_priority apt_preference['priority']
-  end
+  pin_priority node['dotdeb_repo']['priority']
 end
