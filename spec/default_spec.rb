@@ -34,4 +34,29 @@ describe 'dotdeb_repo::default' do
         end
     end
 
+    context 'priority attribute' do
+
+        let(:chef_run) do
+          ChefSpec::Runner.new do |node|
+            node.set['lsb']['codename'] = 'wheezy'
+          end
+        end
+
+        [
+          [ 500 ],
+          [ 700 ],
+          [ 900 ]
+        ].each do | priority |
+
+          it 'set the priority of the dotdeb repository to given value' do
+
+            chef_run.node.set['dotdeb_repo']['priority'] = priority
+            chef_run.converge(described_recipe)
+
+            expect(chef_run).to add_apt_preference('dotdeb').with(pin_priority: priority.to_s)
+          end
+
+        end
+    end
+
 end
