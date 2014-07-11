@@ -20,6 +20,10 @@ Adds the main repository to the sources.list.d and installs the GnuPG key.
 
 Adds additional repository to the sources.list.d to install PHP 5.4 on Debian 6.0 "Squeeze" or PHP 5.5 on Debian 7.0 "Wheezy".
 
+Attributes
+----------
+* `['dotdeb_repo']['priority']` - the priority of the repository (default 700)
+
 Contribution
 ------------
 
