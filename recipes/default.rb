@@ -19,5 +19,5 @@ end
 apt_preference 'dotdeb' do
   glob         '*'
   pin          'origin packages.dotdeb.org'
-  pin_priority node['dotdeb_repo']['priority']
+  pin_priority node['dotdeb_repo']['priority'].to_s
 end

@@ -42,7 +42,11 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     chef.add_recipe "dotdeb_repo::php_newest"
 
     # You may also specify custom JSON attributes:
-    chef.json = {  }
+    chef.json = {
+      'dotdeb_repo' => {
+        'priority' => 700
+      }
+    }
   end
 
 end
